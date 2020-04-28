@@ -1,19 +1,9 @@
-<html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body>
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LfbfO8UAAAAAAM3tLSI7jfrm9OZQZlaeqnK-gmW
-"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
-</html>
-<script type='text/javascript'>
-  (function() {if(grecaptcha.getResponse().length === 0) {
-      alert('aaa');
-  }})()
-</SCRIPT>
+<script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_6Lekfe8UAAAAANVVH6E8KyVtQ_UGZQuHrO9uSgGx
+"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
